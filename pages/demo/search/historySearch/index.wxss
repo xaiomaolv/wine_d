@@ -1,0 +1,100 @@
+/* pages/jsCase/historySearch/index.wxss */
+page{
+  background: white;
+}
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  background: #ffffff;
+}
+.head_input {
+  position: relative;
+  flex: 1;
+  margin-left: 12rpx;
+}
+
+.search_icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -15rpx;
+  width: 48rpx;
+  height: 30rpx;
+  padding-left: 23rpx;
+}
+
+.head input {
+  height: 60rpx;
+  padding-left: 75rpx;
+  font-size: 28rpx;
+  border-radius: 30rpx;
+  background: #F5F5F5;
+}
+
+.place_holder {
+  font-size: 28rpx;
+  color: #999999;
+}
+
+.sha_icon{
+  margin-left: 18rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+
+.con{
+  padding: 130rpx 20rpx ;
+}
+.title{
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333333;
+}
+
+.c_item{
+  font-size: 25rpx;
+  height: 49rpx;
+  line-height: 49rpx;
+  padding: 0 26rpx;
+  background: #EEEEEE;
+  border-radius: 31rpx;
+  justify-content: center;
+  margin-bottom: 24rpx;
+  margin-right: 24rpx;
+  white-space:pre;
+  color: black;
+}
+.list{
+  margin-top: 40rpx;
+  flex-wrap: wrap;
+}
+.hot-list{
+  margin-top: 20rpx;
+  flex-wrap: wrap;
+}
+.hot_line{
+  width: 100%;
+  border-bottom: 1rpx solid rgb(235, 231, 231);
+}
+.hot_item{
+  font-size: 25rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  justify-content: center;
+  margin: 20rpx 0;
+  white-space:pre;
+  color: black;
+}
+.color{
+  color: #83B7FD;
+}
+
+.clear{
+  color: #999;
+  font-size: 25rpx;
+}

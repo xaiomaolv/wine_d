@@ -1,0 +1,55 @@
+/* pages/search/wineSearch/wineSearch.wxss */
+page{
+  background: white;
+}
+.nav-bar{
+ padding: 0 !important;
+}
+.nav-title{
+  font-size: 30rpx;
+}
+
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  background: #ffffff;
+}
+.head_input {
+  position: relative;
+  flex: 1;
+  margin-left: 12rpx;
+}
+
+.search_icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -15rpx;
+  width: 48rpx;
+  height: 30rpx;
+  padding-left: 23rpx;
+}
+
+.head input {
+  height: 60rpx;
+  padding-left: 75rpx;
+  font-size: 28rpx;
+  border-radius: 30rpx;
+  background: #F5F5F5;
+}
+
+.place_holder {
+  font-size: 28rpx;
+  color: #999999;
+}
+
+.sha_icon{
+  margin-left: 18rpx;
+  font-size: 28rpx;
+  color: #333333;
+}

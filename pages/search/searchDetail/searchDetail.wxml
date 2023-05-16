@@ -1,0 +1,19 @@
+<!--pages/search/searchDetail/searchDetail.wxml-->
+<view>
+  <!-- <van-nav-bar class="" custom-class="nav-bar" border="false" title-class="nav-title"  title="劈里劈里啪啦劈里啪劈里劈里啪啦劈里啪" left-arrow safe-area-inset-top="false" bind:click-left="onClickLeft" bind:click-right="onClickRight">
+    <van-icon name="bell" size="20" slot="right" info="99+" />
+  </van-nav-bar>
+  <view class="ft-se-12 tx-ct">2333款酒</view> -->
+  <view class="flex-col tx-ct">
+    <view class="flex-col-3">
+      <view class="arrow-l"></view>
+    </view>
+    <view class="flex-col-18 mg-rt-5">
+      <view class="tx-of" style="font-weight: 550;">劈里劈里啪啦劈里啪劈里劈里啪啦劈里啪劈里劈里啪啦劈里啪劈里劈里啪啦劈里啪</view>
+      <view class="ft-se-12">2333款酒</view>
+    </view>
+    <view class="flex-col-3">
+      <van-icon name="bell" size="20" info="99+" />
+    </view>
+  </view>
+</view>

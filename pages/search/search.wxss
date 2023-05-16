@@ -1,0 +1,157 @@
+/* pages/search/search.wxss */
+page{
+  background: white;
+}
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90rpx;
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  background: #ffffff;
+}
+.head_input {
+  position: relative;
+  flex: 1;
+  margin-left: 12rpx;
+}
+
+.search_icon {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -15rpx;
+  width: 38rpx;
+  height: 30rpx;
+  padding-left: 23rpx;
+}
+
+.head input {
+  height: 60rpx;
+  padding-left: 75rpx;
+  font-size: 28rpx;
+  border-radius: 30rpx;
+  background: #F5F5F5;
+}
+
+.place_holder {
+  font-size: 28rpx;
+  color: #aaa5a5;
+}
+
+.sha_icon{
+  margin-left: 18rpx;
+  font-size: 28rpx;
+  color: #333333;
+}
+
+.con{
+  padding: 26rpx 20rpx ;
+}
+.title{
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333333;
+}
+
+.c_item{
+  font-size: 25rpx;
+  height: 49rpx;
+  line-height: 49rpx;
+  padding: 0 26rpx;
+  background: #EEEEEE;
+  border-radius: 31rpx;
+  justify-content: center;
+  margin-bottom: 24rpx;
+  margin-right: 24rpx;
+  white-space:pre;
+  color: black;
+}
+.list{
+  margin-top: 40rpx;
+  flex-wrap: wrap;
+}
+.hot-list{
+  margin-top: 20rpx;
+  flex-wrap: wrap;
+}
+.hot_line{
+  width: 100%;
+  border-bottom: 1rpx solid rgb(235, 231, 231);
+}
+.hot_item{
+  font-size: 25rpx;
+  height: 28rpx;
+  line-height: 28rpx;
+  justify-content: center;
+  margin: 20rpx 0;
+  white-space:pre;
+  color: black;
+}
+.color{
+  color: #83B7FD;
+}
+
+.clear{
+  color: #999;
+  /* font-size: 25rpx; */
+}
+/* 右箭头 */
+.arrow-r {
+  /* position: absolute; */
+  right: 50rpx;
+  top: 150rpx;
+  content: "";
+  display: inline-block;
+  height: 14rpx;
+  width: 14rpx;
+  border-width: 2px 2px 0 0;
+  border-color: rgb(26, 25, 25);
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+  -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+}
+
+/*  搜索结果高亮 */
+.search-con{
+  padding-top: 10rpx;
+  margin: 0 20rpx;
+}
+
+.item {
+  border-bottom: 1rpx solid rgb(241, 239, 239);
+  padding: 20rpx 0;
+  font-size: 28rpx;
+  color: #333333;
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.ative {
+  color: #B81728;
+}
+
+/* 未查找到结果 */
+.empty {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20vh 0;
+}
+.emptyImg{
+  height: 160rpx;
+  width: 160rpx;
+}
+.empty__description {
+  color: #969799;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  margin-top: 20rpx;
+  padding: 0 120rpx;
+}

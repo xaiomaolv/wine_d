@@ -1,0 +1,29 @@
+<!--pages/jsCase/historySearch/index.wxml-->
+<view class="head flex-col">
+  <view class="head_input">
+    <image src="/img/search_icon.png" class="search_icon"></image>
+    <input type="text" placeholder="搜索" placeholder-class="place_holder" bindconfirm="getData" value="{{search}}"></input>
+  </view>
+  <view class="sha_icon" catchtap="clear_input">取消</view>
+</view>
+<view class="con">
+  <view wx:if="{{list.length>0}}">
+    <view class="flex-col j_b">
+      <view class="title flex-col-12">最近搜索</view>
+      <view catchtap="clearHistory" class="clear flex-col-12 tx-rt">清空</view>
+    </view>
+
+    <view class="flex-col list">
+      <block wx:for="{{list}}" wx:key="index">
+        <view class="c_item" data-index="{{index}}" catchtap="getSearchOne">{{item}}</view>
+      </block>
+    </view>
+  </view>
+  <view class="title">热门搜索</view>
+  <view class="flex-row hot-list">
+    <block wx:for="{{hot_list}}" wx:key="index">
+      <view class="hot_item" data-index="{{index}}" catchtap="getSearch">{{item}}</view>
+      <view class="hot_line"></view>
+    </block>
+  </view> 
+</view>

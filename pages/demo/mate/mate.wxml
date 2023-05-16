@@ -1,0 +1,4 @@
+<!--pages/demo/mate/mate.wxml-->
+<!-- <view class="back" style="height: 50 rpx"> -->
+<view class="userinfo" style="height: 50 rpx">
+</view>

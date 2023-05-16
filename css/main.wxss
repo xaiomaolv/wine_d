@@ -1,0 +1,271 @@
+/* 尽量使用已经定义的css样式和cu-样式 */
+page {
+  /* 主色颜色  #FE716F*/
+  --primary-color:#B81728; 
+  /* 副色颜色（暂未使用） */
+  --secondly-color: #000000;
+  --white-color: #FFF;
+  /* 边框定义 */
+  --border-radius: 10rpx;
+  --border-radius-3:6rpx;
+  --border-radius-5:10rpx;
+  --border-radius-8:16rpx;
+  --border-radius-10:20rpx;
+  --border-color:#ebedf0;
+  /* --border-color:red; */
+  --bth-max-width:95%;
+  --color: #646566;
+}
+
+canvas.off-screen {
+  width: 5000rpx;
+  height: 5000rpx;
+  position: absolute;
+  left: -5000rpx;
+}
+
+/* 按钮 */
+.line-btn {
+  width: 150rpx !important;
+  margin: 20rpx 0rpx 0rpx 20rpx !important;
+}
+
+.btn-block {
+  width: 92% !important;
+}
+
+/* 主色 */
+.primary {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0rpx;
+  height: 100rpx;
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  line-height: 100rpx;
+}
+
+.primary[plain] {
+  color: var(--primary-color);
+  background-color: white;
+  border: solid var(--primary-color) 1rpx;
+}
+
+/* 副色 */
+.secondly {
+  background-color: white !important;
+  border: var(--primary-color) solid 1rpx;
+  color: var(--primary-color);
+}
+
+/* 字体大小 */
+.font-sm {
+  font-size: 0.7rem;
+}
+
+.font-md {
+  font-size: 1rem;
+}
+
+.font-lg {
+  font-size: 1.5rem;
+}
+
+.font-xl {
+  font-size: 2rem !important;
+}
+
+.font-xl input {
+  height: 2rem;
+}
+
+/* 独立一行 */
+.row {
+  display: block;
+}
+
+/* 非独立行 */
+.inline {
+  display: inline-block;
+}
+
+/* 卡片 */
+.card {
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius-5);
+  margin: 40rpx 20rpx 0 20rpx;
+  padding:30rpx 20rpx;
+  color: white;
+}
+
+.card-bg {
+  background-image: url(https://image.weilanwl.com/color2.0/cardBg.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/* 选中 */
+.card.selected {
+  box-shadow: 10px 10px 5px #888888;
+}
+
+
+/* 水平垂直居中 */
+.text-centerhv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+/* 全屏高度 */
+.height-25 {
+  height: 25vh;
+}
+
+.height-50 {
+  height: 50vh;
+}
+
+.height-75 {
+  height: 75vh;
+}
+
+/* 全屏宽度 */
+.width-25 {
+  width: 25vw;
+}
+
+.width-50 {
+  width: 50vw;
+}
+
+.width-100 {
+  width: 100vw;
+}
+
+/* 圆形 */
+.circle-25 {
+  height: 25vw;
+  width: 25vw;
+  border-radius: 5000rpx;
+}
+
+.circle-33 {
+  height: 33.33vw;
+  width: 33.33vw;
+  border-radius: 5000rpx;
+}
+
+.circle-50 {
+  height: 50vw;
+  width: 50vw;
+  border-radius: 5000rpx;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 14rpx 0px;
+  justify-content: space-between;
+}
+
+.nav-li {
+  padding: 30rpx;
+  border-radius: 12rpx;
+  width: 45%;
+  margin: 0 2.5% 30rpx;
+  background-image: url(https://image.weilanwl.com/color2.0/cardBg.png);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+  text-align: left;
+}
+
+.nav-li::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: inherit;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: -10%;
+  border-radius: 10rpx;
+  opacity: 0.2;
+  transform: scale(0.9, 0.9);
+}
+
+.nav-li.cur {
+  color: #fff;
+  background: rgb(94, 185, 94);
+  box-shadow: 4rpx 4rpx 6rpx rgba(94, 185, 94, 0.4);
+}
+
+.nav-title {
+  font-size: 32rpx;
+  font-weight: 300;
+}
+
+.nav-title::first-letter {
+  font-size: 40rpx;
+  margin-right: 4rpx;
+}
+
+.nav-name {
+  font-size: 28rpx;
+  text-transform: Capitalize;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.nav-name::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40rpx;
+  height: 6rpx;
+  background: #fff;
+  bottom: 0;
+  right: 0;
+  opacity: 0.5;
+}
+
+.nav-name::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100rpx;
+  height: 1px;
+  background: #fff;
+  bottom: 0;
+  right: 40rpx;
+  opacity: 0.3;
+}
+
+.nav-name::first-letter {
+  font-weight: bold;
+  font-size: 36rpx;
+  margin-right: 1px;
+}
+
+.nav-li text {
+  position: absolute;
+  right: 30rpx;
+  top: 30rpx;
+  font-size: 52rpx;
+  width: 60rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+
+.text-light {
+  font-weight: 300;
+}
+.cu-form-group .title::after{
+  content: '*';
+  width: 20rpx;
+  height: 100%;
+  font-size: 36rpx;
+  color: #F00;
+}

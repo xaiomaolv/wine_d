@@ -1,0 +1,4 @@
+/* pages/history/history.wxss */
+.st{
+  color: #a82e2e;
+}

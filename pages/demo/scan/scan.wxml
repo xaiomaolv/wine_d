@@ -1,0 +1,51 @@
+<!--pages/scan/scan.wxml-->
+<view class="">
+  <camera wx:if='{{isShowCamera}}' device - position="width" flash="auto" style="width:100%; height:88vh">
+    <view style="display: flex;">
+
+      <cover-image class='bgImage' style="margin-top:{{navHeight}}px" src="../../img/scan/bk.png">
+      </cover-image>
+      <!-- <cover-image class='bgImage' src='{{isIphoneX==true?"../../myImage/vehicle/biankuang_x.png":"../../myImage/vehicle/biankuang.png"}}'> </cover-image> -->
+      <cover-view wx:if="{{isFirst}}" class='cameratop-view1'>-扫描酒瓶-</cover-view>
+      <cover-view wx:if="{{isFirst}}" class='cameratop-view2'>正面标签部分</cover-view>
+      <cover-view wx:if="{{isFirst}}" class='cameratop-view3'>识别率最高的拍照区域</cover-view>
+      <!-- <cover-view class='cameracenter-view' style='top:{{isIphoneX==true?"52%":"62%"}}'>请对准左下角发证机关印章</cover-view> -->
+    </view>
+
+    <!-- 识别图片-->
+    <view style="height: 22vh;">
+      <view style="">
+        <scroll-view class="scroll" scroll-x="true" scroll-into-view='{{toView}}'>
+          <view style="padding: 20rpx;" class="flex-col-24">
+            <view wx:for="{{dataArr}}" id="view{{index}}" wx:key="index" class="flex-col-6 mg-20 card_item {{index==current}}">
+              <view class="center_btn">
+                <text>2.2</text>
+                <!-- <text>暂无评分</text> -->
+              </view>
+              <view style="background: rgb(141, 138, 138)" catchtap="tap" data-index="{{index}}">
+                <image src="../../img/sy.jpg" mode="aspectFill" style="width: 100%;border-radius: 15rpx;height: 260rpx;"></image>
+                <view class="tx-ct clr-FFF">¥2102</view>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+  </camera>
+  <view class='camerabgImage-view'>
+    <!-- 拍照按钮 -->
+    <view class='camerabotton-view' style='bottom:{{isIphoneX==true?"75px":"0px"}}'>
+      <image class='takephoto' src='../../img/scan/xc.png' bindtap='chooseImg'></image>
+      <image class='takephoto1' src='../../img/scan/pz.png' bindtap='takePhotoAction'></image>
+      <image class='takephoto' src='../../img/scan/ts.png' bindtap='photohHistory'></image>
+    </view>
+  </view>
+  <!-- <cover-view class='camerabgImage-view'>
+    <cover-view class='camerabotton-view' style='bottom:{{isIphoneX==true?"75px":"0px"}}'>
+      <cover-image class='takephoto' src='../img/xc.png' bindtap='chooseImg'></cover-image>
+      <cover-image class='takephoto1' src='../img/pz.png' bindtap='takePhotoAction'></cover-image>
+      <cover-image class='takephoto' src='../img/ts.png' bindtap='photohHistory'></cover-image>
+    </cover-view>
+  </cover-view> -->
+
+</view>

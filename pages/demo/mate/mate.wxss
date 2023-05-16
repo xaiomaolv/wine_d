@@ -1,0 +1,32 @@
+/* pages/demo/mate/mate.wxss */
+.back{
+  background-image: url(https://img2.baidu.com/it/u=1476407602,614208210&fm=253&fmt=auto&app=138&f=JPEG?w=731&h=500);
+  height: 362rpx;
+  width: 140%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 0;
+  left: -20%;
+  z-index: -1;
+  border-radius: 0 0 90% 40%; 
+}
+.userinfo {
+  display: relative;
+  flex-direction: column;
+  align-items: center;
+  height: 300rpx;
+}
+.userinfo::after{
+  content: '';
+  width: 140%;
+  height: 360rpx;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  top: 0;
+  border-radius: 0 0 90% 40%;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(https://img2.baidu.com/it/u=1476407602,614208210&fm=253&fmt=auto&app=138&f=JPEG?w=731&h=500);
+}

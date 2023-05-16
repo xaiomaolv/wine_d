@@ -1,0 +1,40 @@
+<!--pages/search/wineSearch/wineSearch.wxml-->
+<view>
+  <van-nav-bar class="" custom-class="nav-bar" title-class="nav-title" title="劈里啪啦" left-text="" left-arrow safe-area-inset-top="false">
+  <van-icon name="bell" size="18" slot="right" info="2999"/>
+</van-nav-bar>
+</view>
+
+<!-- <van-tabs active="{{ active }}">
+  <van-tab wx:for="{{activeList}}" wx:key="index" :title="{{'标签 ' + item.name}}">
+    内容 {{ item.name }}
+  </van-tab>
+</van-tabs> -->
+<van-tabs active="{{ active }}" scrollspy sticky>
+  <van-tab title="标签 1">
+  <view>大雁南飞，不惧怕路途的遥远。---题记
+很多年了，习惯了抬头看天空。当春天的风筝布满天空的时候，笑容里是甜蜜的一汪清泉。当大雁飞过天空的时候，秋天已经到了尽头，笑容里迷离着一股离愁。喜欢抬头的那种姿态，很多关于梦的想法，都会觉得不再遥远。抬起头看天空的那一刻，放飞的心绪里满载着无数的渴望。无论是想放下悲伤，还是想充满希望，就在那遥远的天际，如丝如缕。
+很早都学会了不惧怕的活着，因为每天的天空上都会出现太阳，于是不惧怕遇见的困难，是因为明天的太阳不会因为某一种因素而不在天上。仰望天空，收获着力量。
+风筝飞起了，我想起过。大雁南飞时，我依然会想起.可能是曾经心动的人，可能是曾经帮助过自己的人，也可能只是一个模糊的情愫，更可能是一个很早的梦想。
+深居在秋色里，望着天上的大雁飞过，小小的大雁能越过千山万水的从北方迁移到南方，需要多大的力量来支撑着它们的一路艰辛。不惧怕的精神，让大雁成群结队的，彼此鼓励彼此支持着，一路向南。
+我们也像一群大雁，飞翔在人生的天空中。
+前面的路程是自己不可以预知的未来，可能或有险滩，可能会有丛林，可能会遇上豺狼虎豹，可能会有生命的危险。这所有的困难，我们都要不惧怕它的存在，而勇往直前。
+当你披荆斩棘，当你委屈流泪，当你绝望彷徨，当你得意尽欢，这一切的遭遇都是我们应该遇见的，所以，不要途中放弃，不要自暴自弃。
+再次凝望着远去的大雁，秋天随着时间的流逝，渐渐远去。
+我们都会老去，可是，在你飞翔的时候，你是否竭尽全力?
+当秋天不再，大雁飞过千山，南方的冬天还会冷吗?
+秋色连绵处，苍凉有感。却又有无数景色值得欣赏，有菊花之绚烂，有红叶之亮眼，有大雁飞过时留下的声音和美丽的倩影。谁说这不是一个很美很美的秋天呢。雁自南飞，秋在尽头，在秋中，我们走过无数的路。</view>
+  </van-tab>
+  <van-tab title="标签 2">内容 2</van-tab>
+  <van-tab title="标签 3">内容 3</van-tab>
+  <van-tab title="标签 4">内容 4</van-tab>
+</van-tabs>
+
+
+<!-- <view class="head flex-col">
+  <view class="head_input">
+    <image src="/img/search_icon.png" class="search_icon"></image>
+    <input type="text" placeholder="搜索" placeholder-class="place_holder" bindconfirm="getData" value="{{search}}"></input>
+  </view>
+  <view class="sha_icon" catchtap="clear_input">取消</view>
+</view> -->

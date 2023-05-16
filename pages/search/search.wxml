@@ -1,0 +1,71 @@
+<!--pages/search/search.wxml-->
+<view class="head flex-col">
+  <view class="head_input">
+    <image src="/img/search/search_icon.png" class="search_icon"></image>
+    <input type="text" placeholder="搜索葡萄酒" placeholder-class="place_holder" bindconfirm="getData" bindinput="getValue" value="{{search}}"></input>
+  </view>
+  <view class="sha_icon" catchtap="clear_input">取消</view>
+</view>
+
+<view class="tabNav" style="margin-top: 90rpx;">
+  <view wx:for="{{navTab}}" wx:key="index" data-idx="{{index}}" bindtap="currentTab" class="{{currentTab==index ? 'cur' : ''}}">
+    <text>{{item}}</text>
+  </view>
+</view>
+<view wx:if="{{currentTab == 0}}">
+  <view wx:if="{{!isSearch}}" class="con">
+    <view wx:if="{{list.length>0}}">
+      <view class="flex-col j_b">
+        <view class="title flex-col-12">最近搜索</view>
+        <view catchtap="clearHistory" class="clear flex-col-12 tx-rt">
+          <van-icon name="delete-o" bind:click="clearHistory" />
+        </view>
+      </view>
+      <view>
+        <view class="flex-col list">
+          <block wx:for="{{list}}" wx:key="index">
+            <view class="c_item" data-index="{{index}}" catchtap="getSearchOne">{{item.name}}</view>
+          </block>
+        </view>
+      </view>
+      <view wx:if="{{list.length > 7}}" class="tx-ct">
+        <text>更多</text>
+        <text class="ft-bt" style="padding: 10rpx;">></text>
+      </view>
+    </view>
+
+    <view class="flex-col">
+      <view class="mg-rt-10">
+        <van-icon name="fire-o" color="#B81728" />
+      </view>
+      <view class="title">
+        热门搜索</view>
+    </view>
+    <view class="flex-row hot-list">
+      <block wx:for="{{hot_list}}" wx:key="index">
+        <view class="hot_item" data-index="{{index}}" catchtap="getSearch">
+          <text class="mg-rt-10" style="color:{{index < 4 ?'#B81728':''}}">{{index+1}}</text>
+          <text>{{item.name}}</text>
+        </view>
+        <view class="hot_line"></view>
+      </block>
+    </view>
+  </view>
+  <!-- 搜索结果高亮 -->
+  <view wx:if="{{isSearch}}" class="search-con">
+    <view class="item" wx:for="{{ filterList }}" wx:key="index" data-index="{{ index }}">
+      <view bindtap="goSearchDetail">
+        <text wx:for="{{item.list}}" class="{{i0.set &&'ative'}}" wx:key="idx" wx:for-item="i0">{{i0.val}}</text>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{currentTab == 1}}">
+  <!-- <van-empty class="custom-image" image="/img/search/empty.png" description="暂未搜索到相关酒款" /> -->
+  <view class="empty">
+    <image class="emptyImg" src="/img/search/empty.png" mode=""/>
+    <view>无查找结果</view>
+    <view class="empty__description">暂未搜索到相关酒款</view>
+  </view>
+</view>

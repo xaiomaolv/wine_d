@@ -1,0 +1,63 @@
+/* pages/search/searchDetail/searchDetail.wxss */
+page {
+  background: white;
+}
+
+.nav-bar {
+  padding: 0 !important;
+}
+
+.nav-title {
+  font-size: 30rpx;
+}
+
+/* 左箭头 */
+/* 上箭头：border-width: 2px 0 0 2px;
+右箭头：border-width: 2px 2px 0 0;
+下箭头：border-width: 0 2px 2px 0;
+左箭头：border-width: 0 0 2px 2px; */
+.arrow-l {
+  /* position: absolute; */
+  right: 50rpx;
+  top: 150rpx;
+  content: "";
+  display: inline-block;
+  height: 16rpx;
+  width: 16rpx;
+  border-width: 0 0 2px 2px;
+  border-color: rgb(26, 25, 25);
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+  -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+}
+
+van-nav-bar__text {
+  margin-left: -20px;
+  padding-left: 25px
+}
+
+.van-nav-bar__title {
+  /* color: var(--nav-bar-title-text-color, #323233);
+  font-size: var(--nav-bar-title-font-size, 16px);
+  font-weight: var(--font-weight-bold, 500); */
+  margin: 0 auto;
+  max-width: 60%
+}
+
+.van-nav-bar__left,
+.van-nav-bar__right {
+  align-items: center;
+  bottom: 0;
+  display: flex;
+  font-size: 14px;
+  /* position: absolute; */
+  top: 0
+}
+
+.van-nav-bar__left {
+  left: 16px
+}
+
+.van-nav-bar__right {
+  right: 16px
+}

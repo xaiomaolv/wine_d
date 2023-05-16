@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/search/searchDetail/searchDetail",
+    "pages/home/home",
+    "pages/index/index",
+    "pages/community/community",
+    "pages/mine/mine",
+    "pages/scan/scan",
+    "pages/search/search",
+    "pages/scan/scsn_d/scsn_d"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#B81728",
+    "borderStyle": "white",
+    "selectedColor": "#ffffff",
+    "color": "#515151",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "img/home/tj.png",
+        "selectedIconPath": "img/home/tj.png",
+        "text": "推荐"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "iconPath": "img/home/se.png",
+        "selectedIconPath": "img/home/se.png",
+        "text": "搜索"
+      },
+      {
+        "pagePath": "pages/scan/scsn_d/scsn_d",
+        "iconPath": "img/home/xj.png",
+        "selectedIconPath": "img/home/xj.png",
+        "text": ""
+      },
+      {
+        "pagePath": "pages/community/community",
+        "iconPath": "img/home/sq.png",
+        "selectedIconPath": "img/home/sq.png",
+        "text": "社区"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "iconPath": "img/home/mine.png",
+        "selectedIconPath": "img/home/mine.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
