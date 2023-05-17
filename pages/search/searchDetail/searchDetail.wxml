@@ -92,5 +92,4 @@
     全部清除
   </view>
 </van-popup> -->
-<popup class="popup"></popup>
-
+<popupTop class="popup"></popupTop>
