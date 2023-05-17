@@ -4,16 +4,93 @@
     <van-icon name="bell" size="20" slot="right" info="99+" />
   </van-nav-bar>
   <view class="ft-se-12 tx-ct">2333款酒</view> -->
+  <!-- 顶部导航 -->
   <view class="flex-col tx-ct">
-    <view class="flex-col-3">
-      <view class="arrow-l"></view>
+    <view class="flex-col-3" bindtap="onClickLeft">
+      <view class="arrow-left"></view>
     </view>
     <view class="flex-col-18 mg-rt-5">
       <view class="tx-of" style="font-weight: 550;">劈里劈里啪啦劈里啪劈里劈里啪啦劈里啪劈里劈里啪啦劈里啪劈里劈里啪啦劈里啪</view>
       <view class="ft-se-12">2333款酒</view>
     </view>
-    <view class="flex-col-3">
+    <view class="flex-col-3" bindtap="onClickRight">
       <van-icon name="bell" size="20" info="99+" />
     </view>
   </view>
+
+  <!-- 中间搜索 -->
+  <view class="mg-30-20">
+    <view class="">
+      <view class="range-price">
+        <view class="min-price">¥ {{ priceRange[0] }}</view>
+        <view wx:if="{{priceRange[1] <= 20000}}" class="max-price">
+          ¥ {{ priceRange[1] }}
+        </view>
+        <view wx:if="{{priceRange[1] === 20001}}" class="max-price">
+          ¥ 20000+
+        </view>
+      </view>
+      <view class="slide">
+        <van-slider value="{{ priceRange }}" range bar-height="10px" max="20001" active-color="#494545" bind:drag-start="changeStart()" bind:drag-end="changeEnd" bind:change="onChanged">
+        </van-slider>
+      </view>
+    </view>
+  </view>
+
+  <!-- 搜索 -->
+  <!-- scroll-view横向滚动 -->
+  <scroll-view class="scroll-view" scroll-x="{{true}}">
+    <view class="scroll-item tx-ct" wx:for="{{searchScrollList}}" wx:key="item.id" bindtap="chooseSearch">
+      <image src="{{item.icon}}" style="width: 80rpx;height: 80rpx;"></image>
+      <view class="clr-9491">{{item.name}}</view>
+    </view>
+  </scroll-view>
+
+  <!-- 排序 -->
+  <view class="flex-col mg-0-10">
+    <view class="flex-col-12 tx-lt">
+      <view class="flex-col" bindtap="changeSortPopup">排序:
+        <text class="mg-lt-10">{{sortValue =='' ? sortArray[sortndex] : sortValue}}</text>
+        <text class="mg-lt-10 arrow-bottom"></text>
+        <!-- <picker class="mg-lt-10" bindchange="bindSortChange" bindcancel="bindSortCancel" value="{{sortndex}}" range="{{sortArray}}">
+          <view>
+            {{sortArray[sortndex]}}
+          </view>
+        </picker> -->
+      </view>
+
+    </view>
+    <view class="flex-col-12 tx-rt">
+      <checkbox class="mg-rt-5" value="cb" checked="{{switchChecked}}" />仅看可购买
+      <!-- <switch type="checkbox" class="checkbox" checked="{{switchChecked}}" bindchange="switchChange" /> -->
+      <!-- <text class=""></text> -->
+    </view>
+  </view>
 </view>
+<!-- 排序弹窗 -->
+<van-popup round show="{{ showSort }}" closeable close-icon="close" position="bottom" custom-style="min-height: 45%" bind:close="bindSortCancel">
+  <view class="mg-lt-20 mg-tp-20">排序方式</view>
+  <view class="mg-lt-20">
+    <radio-group bindchange="radioSortChange">
+      <label class="flex-col mg-20-10" wx:for="{{sortArray}}" wx:key="index">
+        <view class="">
+          <radio value="{{item}}" checked="true" color="#f7f4f4" />
+        </view>
+        <view class="">{{item}}</view>
+      </label>
+    </radio-group>
+  </view>
+</van-popup>
+
+<!-- 搜索详情弹窗 -->
+<!-- <van-popup round show="{{ showSeach }}" position="top" custom-style="height: {{height}}px; max-height: {{maxHeight}}px" bind:close="bindSearchCancel">
+  <view class="popup-content mg-20-10" style="position: relative;">
+    <text>很多年了，习惯了抬头看天空。当春天的风筝布满天空的时候，笑容里是甜蜜的一汪清泉。当大雁飞过天空的时候，秋天已经到了尽头，笑容里迷离着一股离愁。喜欢抬头的那种姿态，很多关于梦的想法，都会觉得不再遥远。抬起头看天空的那一刻，放飞的心绪里满载着无数的渴望。无论是想放下悲伤，还是想充满希望，就在那遥远的天际，如丝如缕。很多年了，习惯了抬头看天空。当春天的风筝布满天空的时候，笑容里是甜蜜的一汪清泉。当大雁飞过天空的时候，秋天已经到了尽头，笑容里迷离着一股离愁。喜欢抬头的那种姿态，很多关于梦的想法，都会觉得不再遥远。抬起头看天空的那一刻，放飞的心绪里满载着无数的渴望。无论是想放下悲伤，还是想充满希望，就在那遥远的天际，如丝如缕。很多年了，习惯了抬头看天空。当春天的风筝布满天空的时候，笑容里是甜蜜的一汪清泉。当大雁飞过天空的时候，秋天已经到了尽头，笑容里迷离着一股离愁。喜欢抬头的那种姿态，很多关于梦的想法，都会觉得不再遥远。抬起头看天空的那一刻，放飞的心绪里满载着无数的渴望。无论是想放下悲伤，还是想充满希望，就在那遥远的天际，如丝如缕。很多年了，习惯了抬头看天空。当春天的风筝布满天ß空的时候，笑容里是甜蜜的一汪清泉。当大雁飞过天空的时候，秋天已经到了尽头，笑容里迷离着一股离愁。喜欢抬头的那种姿态，很多关于梦的想法，都会觉得不再遥远。抬起头看天空的那一刻，放飞的心绪里满载着无数的渴望。无论是想放下悲伤，还是想充满希望，就在那遥远的天际，如丝如缕。很多年了，习惯了抬头看天空。当春天的风筝布满天空的时候，笑容里是甜蜜的一汪清泉。当大雁飞过天空的时候，秋天已经到了尽头，笑容里迷离着一股离愁。喜欢抬头的那种姿态，很多关于梦的想法，都会觉得不再遥远。抬起头看天空的那一刻，放飞的心绪里满载着无数的渴望。无论是想放下悲伤，还是想充满希望，就在那遥远的天际，如丝如缕。很多年了，习惯了抬头看天空。当春天的风筝布满天空的时候，笑容里是甜蜜的一汪清泉。当大雁飞过天空的时候，秋天已经到了尽头，笑容里迷离着一股离愁。喜欢抬头的那种姿态，很多关于梦的想法，都会觉得不再遥远。抬起头看天空的那一刻，放飞的心绪里满载着无数的渴望。无论是想放下悲伤，还是想充满希望，就在那遥远的天际，如丝如缕。很多年了，习惯了抬头看天空。当春天的风筝布满天空的时候，笑容里是甜蜜的一汪清泉。当大雁飞过天空的时候，秋天已经到了尽头，笑容里迷离着一股离愁。喜欢抬头的那种姿态，很多关于梦的想法，都会觉得不再遥远。抬起头看天空的那一刻，放飞的心绪里满载着无数的渴望。无论是想放下悲伤，还是想充满希望，就在那遥远的天际，如丝如缕。很多年了，习惯了抬头看天空。当春天的风筝布满天空的时候，笑容里是甜蜜的一汪清泉。当大雁飞过天空的时候，秋天已经到了尽头，笑容里迷离着一股离愁。喜欢抬头的那种姿态，很多关于梦的想法，都会觉得不再遥远。抬起头看天空的那一刻，放飞的心绪里满载着无数的渴望。无论是想放下悲伤，还是想充满希望，就在那遥远的天际，如丝如缕。</text>
+
+  </view>
+  <view class="">
+    全部清除
+  </view>
+</van-popup> -->
+<popup class="popup"></popup>
+

@@ -59,6 +59,10 @@
   color: #0099ff;
 }
 
+.clr-9491{
+  color: #949191;
+}
+
 /* 背景色*/
 .bg-w {
   background-color: #ffffff;
@@ -187,7 +191,6 @@
 .ft-b {
   font-weight: bold;
 }
-
 
 .pd-10 {
   padding: 20rpx;
@@ -1054,4 +1057,79 @@ textarea {
 	width: 50%;
 	border-bottom: 5rpx solid #2b2928;
 	color: #1b1b19;
+}
+
+/* 上箭头：border-width: 2px 0 0 2px; */
+.arrow-top {
+  /* position: absolute; */
+  right: 50rpx;
+  top: 150rpx;
+  content: "";
+  display: inline-block;
+  height: 16rpx;
+  width: 16rpx;
+  border-width: 2px 0 0 2px;
+  border-color: rgb(26, 25, 25);
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+  -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+}
+/* 右箭头：border-width: 2px 2px 0 0; */
+.arrow-right {
+  /* position: absolute; */
+  right: 50rpx;
+  top: 150rpx;
+  content: "";
+  display: inline-block;
+  height: 16rpx;
+  width: 16rpx;
+  border-width: 2px 2px 0 0;
+  border-color: rgb(26, 25, 25);
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+  -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+}
+/* 下箭头：border-width: 0 2px 2px 0; */
+.arrow-bottom {
+  /* position: absolute; */
+  right: 50rpx;
+  top: 150rpx;
+  content: "";
+  display: inline-block;
+  height: 16rpx;
+  width: 16rpx;
+  border-width: 0 2px 2px 0;
+  border-color: rgb(26, 25, 25);
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+  -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+}
+/* 左箭头：border-width: 0 0 2px 2px; */
+.arrow-left {
+  /* position: absolute; */
+  right: 50rpx;
+  top: 150rpx;
+  content: "";
+  display: inline-block;
+  height: 16rpx;
+  width: 16rpx;
+  border-width: 0 0 2px 2px;
+  border-color: rgb(26, 25, 25);
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+  -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+}
+.arrow-l {
+  /* position: absolute; */
+  right: 50rpx;
+  top: 150rpx;
+  content: "";
+  display: inline-block;
+  height: 16rpx;
+  width: 16rpx;
+  border-width: 0 0 2px 2px;
+  border-color: rgb(26, 25, 25);
+  border-style: solid;
+  transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
+  -webkit-transform: matrix(0.71, 0.71, -.71, 0.71, 0, 0);
 }
