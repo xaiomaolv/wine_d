@@ -2,46 +2,49 @@
 <!-- 弹窗组件 -->
 <view wx:if="{{showPopup}}">
   <view class="popup-box" bindtap="hideDialog"></view>
-  <view class="info-top" style="height: {{modalHeight}}px; max-height: {{maxHeight}};">
-    <scroll-view style="width:100%;height:100%;" scroll-y="true">
-      <view class="row-info">
-        <view class="contbox">
-          <view class="box">
-            <view class="">风急天高猿啸哀，渚清沙白鸟飞回。</view>
-            <view class="">风急天高猿啸哀，渚清沙白鸟飞回。</view>
-            <view class="">风急天高猿啸哀，渚清沙白鸟飞回。</view>
+  <view class="info-top" style="height: {{modalHeight*2}}rpx; max-height: {{maxHeight*2}}rpx;">
+
+    <view class="row-info" id="content">
+      <view class="row-scroll" style="width:100%;height:{{(modalHeight - 90) * 2}}rpx">
+        <view class="transTop">
+          <!-- <scrollX class="scrollX" searchScrollList="{{searchScrollList}}"></scrollX> -->
+          <scroll-view class="scroll-view" scroll-x="{{true}}">
+            <view class="scroll-item tx-ct {{currentTab == index ? 'active' : ''}}" wx:for="{{searchScrollList}}" wx:key="item.id" data-idx="{{index}}" bindtap="currentTab">
+              <image class="" src="{{currentTab == index ? item.iconActive : item.icon}}" style="width: 50rpx;height: 50rpx;"></image>
+              <view class="clr-9491">{{item.name}}</view>
+            </view>
+          </scroll-view>
+        </view>
+        <!-- 搜索内容list -->
+        <view class="transBottom">
+          <view>
+            <van-search value="{{ value }}" shape="round" placeholder="搜索{{searchScrollList[currentTab].name}}" />
+          </view>
+          <view class="ft-se-14 tx-ct clr-999">18款葡萄酒</view>
+          <!-- 搜索选项详情 -->
+          <!-- 类型 -->
+          <view wx:if="{{currentTab == 0}}">
+            <!-- <view class="list-item flex-center" class="{{checkActiveStatus(model.type, item.uuid) ? 'item-active' : '' }}" v-for="item, index in model.displayList" :key="index" @click="onClickFilter(model, item)">
+              <image :src="item.icon" mode="" class="item-icon" v-if="model.type !== 'grape' && model.type !== 'region' && model.type !== 'style'">
+              </image>
+              <view class="item-text base-text">
+              </view>
+            </view> -->
+            <view class="flex-col flex-wrap">
+            <view wx:for="{{diseaseList}}" wx:key="index" data-index="{{index}}" class="btn {{item.checked ? 'active' : ''}}" bindtap="diseaseSwitch">{{item.diseaseName}}</view>
+          </view>
           </view>
         </view>
-        <!-- <view class="row-author">杜甫 〔唐代〕</view>
-        <view>风急天高猿啸哀，渚清沙白鸟飞回。</view>
-        <view>无边落木萧萧下，不尽长江滚滚来。</view>
-        <view>万里悲秋常作客，百年多病独登台。</view>
-        <view>艰难苦恨繁霜鬓，潦倒新停浊酒杯。</view>
-        <view class="row-author">杜甫 〔唐代〕</view>
-        <view>风急天高猿啸哀，渚清沙白鸟飞回。</view>
-        <view>无边落木萧萧下，不尽长江滚滚来。</view>
-        <view>万里悲秋常作客，百年多病独登台。</view>
-        <view>艰难苦恨繁霜鬓，潦倒新停浊酒杯。</view>
-        <view class="row-author">杜甫 〔唐代〕</view>
-        <view>风急天高猿啸哀，渚清沙白鸟飞回。</view>
-        <view>无边落木萧萧下，不尽长江滚滚来。</view>
-        <view>万里悲秋常作客，百年多病独登台。</view>
-        <view>艰难苦恨繁霜鬓，潦倒新停浊酒杯。</view>
-        <view class="row-author">杜甫 〔唐代〕</view>
-        <view>风急天高猿啸哀，渚清沙白鸟飞回。</view>
-        <view>无边落木萧萧下，不尽长江滚滚来。</view>
-        <view>万里悲秋常作客，百年多病独登台。</view>
-        <view>艰难苦恨繁霜鬓，潦倒新停浊酒杯。</view>
-        <view class="row-author">杜甫 〔唐代〕</view>
-        <view>风急天高猿啸哀，渚清沙白鸟飞回。</view>
-        <view>无边落木萧萧下，不尽长江滚滚来。</view>
-        <view>万里悲秋常作客，百年多病独登台。</view>
-        <view>艰难苦恨繁霜鬓，潦倒新停浊酒杯。</view> -->
       </view>
-    </scroll-view>
-    <!-- <view class="row-btn">
-      <view class="left-btn" bindtap="closePopup">取消</view>
-      <view class="right-btn">确认</view>
-    </view> -->
+      <view id="bottom_btn">
+        <view class="row-btn">
+          <view class="left-btn" bindtap="closePopup">清除{{searchScrollList[currentTab].name}}选项</view>
+          <view class="right-btn">确认</view>
+        </view>
+        <view class="clear-btn">
+          全部清除
+        </view>
+      </view>
+    </view>
   </view>
 </view>

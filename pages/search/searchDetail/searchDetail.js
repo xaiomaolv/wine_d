@@ -20,49 +20,58 @@ Page({
     searchScrollList: [{
         id: 88,
         name: '类型',
-        icon: '/img/search/zj.png'
+        icon: '/img/search/style.png',
+        iconActive: '/img/search/style.png',
       },
       {
         id: 1,
         name: '场地',
-        icon: '/img/search/zj.png'
+        icon: '/img/search/origin.png',
+        iconActive: '/img/search/origin-a.png',
       },
       {
         id: 2,
         name: '葡萄',
-        icon: '/img/search/zj.png'
+        icon: '/img/search/grape.png',
+        iconActive: '/img/search/grape.png',
       },
       {
         id: 3,
         name: '风格',
-        icon: '/img/search/zj.png'
+        icon: '/img/search/style.png',
+        iconActive: '/img/search/style.png',
       },
       {
         id: 4,
         name: '口味',
-        icon: '/img/search/zj.png'
+        icon: '/img/search/flavour.png',
+        iconActive: '/img/search/flavour.png',
       },
       {
         id: 5,
         name: '年份',
-        icon: '/img/search/zj.png'
+        icon: '/img/search/vintage.png',
+        iconActive: '/img/search/vintage.png',
       },
       {
         id: 5,
         name: '评分',
-        icon: '/img/search/zj.png'
+        icon: '/img/search/zj.png',
+        iconActive: '/img/search/zj.png',
       },
       {
         id: 6,
         name: '特色',
-        icon: '/img/search/zj.png'
+        icon: '/img/search/zj.png',
+        iconActive: '/img/search/zj.png',
       },
       {
         id: 7,
         name: '搭配',
-        icon: '/img/search/zj.png'
+        icon: '/img/search/zj.png',
+        iconActive: '/img/search/zj.png',
       },
-    ]
+    ],
   },
 
   /**
@@ -197,7 +206,8 @@ Page({
   bindSearchCancel() {
     this.setData({
       showSeach: false,
-      height:0
+      height: 0
     })
   },
+  
 })

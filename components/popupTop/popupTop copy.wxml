@@ -1,0 +1,47 @@
+<!--components/popup/popup.wxml-->
+<!-- 弹窗组件 -->
+<view wx:if="{{showPopup}}">
+  <view class="popup-box" bindtap="hideDialog"></view>
+  <view class="info-top" style="height: {{modalHeight}}px; max-height: {{maxHeight}}px;">
+    <scroll-view style="width:100%;height:100%;" scroll-y="true">
+      <view class="row-info">
+        <!-- <view class="contbox">
+          <view class="box"> -->
+            <view class="">风急天高猿啸哀，渚清沙白鸟飞回。</view>
+            <view class="">风急天高猿啸哀，渚清沙白鸟飞回。</view>
+            <view class="">风急天高猿啸哀，渚清沙白鸟飞回。</view>
+          <!-- </view>
+        </view> -->
+        <!-- <view class="row-author">杜甫 〔唐代〕</view>
+        <view>风急天高猿啸哀，渚清沙白鸟飞回。</view>
+        <view>无边落木萧萧下，不尽长江滚滚来。</view>
+        <view>万里悲秋常作客，百年多病独登台。</view>
+        <view>艰难苦恨繁霜鬓，潦倒新停浊酒杯。</view>
+        <view class="row-author">杜甫 〔唐代〕</view>
+        <view>风急天高猿啸哀，渚清沙白鸟飞回。</view>
+        <view>无边落木萧萧下，不尽长江滚滚来。</view>
+        <view>万里悲秋常作客，百年多病独登台。</view>
+        <view>艰难苦恨繁霜鬓，潦倒新停浊酒杯。</view>
+        <view class="row-author">杜甫 〔唐代〕</view>
+        <view>风急天高猿啸哀，渚清沙白鸟飞回。</view>
+        <view>无边落木萧萧下，不尽长江滚滚来。</view>
+        <view>万里悲秋常作客，百年多病独登台。</view>
+        <view>艰难苦恨繁霜鬓，潦倒新停浊酒杯。</view>
+        <view class="row-author">杜甫 〔唐代〕</view>
+        <view>风急天高猿啸哀，渚清沙白鸟飞回。</view>
+        <view>无边落木萧萧下，不尽长江滚滚来。</view>
+        <view>万里悲秋常作客，百年多病独登台。</view>
+        <view>艰难苦恨繁霜鬓，潦倒新停浊酒杯。</view>
+        <view class="row-author">杜甫 〔唐代〕</view>
+        <view>风急天高猿啸哀，渚清沙白鸟飞回。</view>
+        <view>无边落木萧萧下，不尽长江滚滚来。</view>
+        <view>万里悲秋常作客，百年多病独登台。</view>
+        <view>艰难苦恨繁霜鬓，潦倒新停浊酒杯。</view> -->
+      </view>
+    </scroll-view>
+    <!-- <view class="row-btn">
+      <view class="left-btn" bindtap="closePopup">取消</view>
+      <view class="right-btn">确认</view>
+    </view> -->
+  </view>
+</view>

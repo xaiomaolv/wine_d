@@ -4,6 +4,7 @@
     "van-nav-bar": "/miniprogram_npm/@vant/weapp/nav-bar/index",
     "van-slider": "/miniprogram_npm/@vant/weapp/slider/index",
     "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
-    "popupTop":"/components/popupTop/popupTop"
+    "popupTop":"/components/popupTop/popupTop",
+    "scrollX":"/components/scroll_x/scroll_x"
   }
 }

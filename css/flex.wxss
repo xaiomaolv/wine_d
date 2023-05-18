@@ -545,7 +545,7 @@
   -ms-flex-pack: start;
   -ms-flex-align: center;
   -ms-flex-line-pack: center;
-
+  
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -553,7 +553,6 @@
   align-items: center;
   align-content: center;
 }
-
 /* 行式弹性盒子 */
 .flex-row {
   display: -webkit-box;

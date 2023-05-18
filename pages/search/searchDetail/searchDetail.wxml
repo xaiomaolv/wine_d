@@ -23,10 +23,10 @@
     <view class="">
       <view class="range-price">
         <view class="min-price">¥ {{ priceRange[0] }}</view>
-        <view wx:if="{{priceRange[1] <= 20000}}" class="max-price">
+        <view wx:if="{{priceRange[1] < 20000}}" class="max-price">
           ¥ {{ priceRange[1] }}
         </view>
-        <view wx:if="{{priceRange[1] === 20001}}" class="max-price">
+        <view wx:if="{{priceRange[1] === 20000}}" class="max-price">
           ¥ 20000+
         </view>
       </view>
@@ -39,12 +39,13 @@
 
   <!-- 搜索 -->
   <!-- scroll-view横向滚动 -->
-  <scroll-view class="scroll-view" scroll-x="{{true}}">
+  <!-- <scroll-view class="scroll-view" scroll-x="{{true}}">
     <view class="scroll-item tx-ct" wx:for="{{searchScrollList}}" wx:key="item.id" bindtap="chooseSearch">
       <image src="{{item.icon}}" style="width: 80rpx;height: 80rpx;"></image>
       <view class="clr-9491">{{item.name}}</view>
     </view>
-  </scroll-view>
+  </scroll-view> -->
+  <scrollX searchScrollList="{{searchScrollList}}"></scrollX>
 
   <!-- 排序 -->
   <view class="flex-col mg-0-10">
@@ -67,6 +68,7 @@
     </view>
   </view>
 </view>
+
 <!-- 排序弹窗 -->
 <van-popup round show="{{ showSort }}" closeable close-icon="close" position="bottom" custom-style="min-height: 45%" bind:close="bindSortCancel">
   <view class="mg-lt-20 mg-tp-20">排序方式</view>
@@ -92,4 +94,4 @@
     全部清除
   </view>
 </van-popup> -->
-<popupTop class="popup"></popupTop>
+<popupTop class="popup" searchScrollList="{{searchScrollList}}"></popupTop>

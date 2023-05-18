@@ -1,0 +1,21 @@
+/* pages/search/components/scroll_x/scroll_x.wxss */
+/* @import '/css/flex.wxss'; */
+.tx-ct{
+  text-align: center;
+}
+.clr-9491{
+  color: #949191;
+}
+/* scroll-view 滑动 */
+.scroll-view {
+  width: 100%;
+  /* height: 100px; */
+  white-space: nowrap;
+}
+
+.scroll-item {
+  display: inline-block;
+  width: 150rpx;
+  /* height: 100px; */
+  margin-bottom: 20rpx;
+}

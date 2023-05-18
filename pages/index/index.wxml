@@ -1,3 +1,12 @@
+<view class="scroll-div">
+  <p>yyyyyyyy</p>
+  <p>yyyyyyyy</p>
+</view>
+<view class="scroll-t">
+  <p>dddddd</p>
+  <p>dddddd</p>
+  <p>ddddddd</p>
+</view>
 <button type="primary" bindtap="openPopup" data-index="0">打开顶部弹窗</button>
 <button type="primary" bindtap="openPopup" data-index="1">打开中间弹窗</button>
 <button type="primary" bindtap="openPopup" data-index="2">打开底部弹窗</button>

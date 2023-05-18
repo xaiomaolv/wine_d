@@ -142,7 +142,6 @@ van-nav-bar__text {
 /* scroll-view 滑动 */
 .scroll-view {
   width: 100%;
-  /* height: 100px; */
   white-space: nowrap;
 }
 
@@ -176,34 +175,40 @@ checkbox {
   width: 32rpx;
   height: 32rpx;
 }
- /* 未选中的 背景样式 */
-checkbox .wx-checkbox-input{
+
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input {
   width: 32rpx;
   height: 32rpx;
   border-radius: 4rpx;
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
+
 /* 选中后的 背景样式*/
-checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+checkbox .wx-checkbox-input.wx-checkbox-input-checked {
   border: 1rpx solid #0c0c0b;
   background: #0c0c0b;
 }
+
 /* 选中后的 对勾样式 */
-checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before {
   width: 32rpx;
   height: 32rpx;
   line-height: 32rpx;
   text-align: center;
-  font-size:30rpx;
-  color:#fff; /* 对勾颜色 白色 */
+  font-size: 30rpx;
+  color: #fff;
+  /* 对勾颜色 白色 */
   background: transparent;
-  transform:translate(-50%, -50%) scale(1);
-  -webkit-transform:translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
+  -webkit-transform: translate(-50%, -50%) scale(1);
 }
-.bottom-text{
+
+.bottom-text {
   position: fixed;
   left: 0;
   right: 0;
   padding: 5px;
   text-align: center;
 }
+

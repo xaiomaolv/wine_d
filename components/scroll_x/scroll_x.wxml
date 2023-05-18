@@ -1,0 +1,10 @@
+<!--pages/components/scroll_x/scroll_x.wxml-->
+<!-- scroll-view横向滚动 -->
+<scroll-view class="scroll-view" scroll-x="{{true}}">
+  <view class="scroll-item tx-ct" wx:for="{{searchScrollList}}" wx:key="item.id" bindtap="chooseSearch">
+    <image src="{{item.icon}}" style="width: 50rpx;height: 50rpx;"></image>
+    <view class="clr-9491">{{item.name}}</view>
+  </view>
+</scroll-view>
+
+<popupTop class="popup" searchScrollList="{{searchScrollList}}"></popupTop>

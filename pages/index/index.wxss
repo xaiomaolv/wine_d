@@ -1,3 +1,31 @@
+.scroll-div {
+  /* height: 200px; */
+  overflow: hidden;
+  animation: scroll 0.5s linear;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.scroll-t {
+  /* height: 200px; */
+  overflow: hidden;
+  animation: scrollt 0.5s linear;
+}
+
+@keyframes scrollt {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(10%);
+  }
+}
 /* 蒙层 */
 .popup-box{
   position: absolute;

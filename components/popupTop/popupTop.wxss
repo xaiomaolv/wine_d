@@ -1,4 +1,6 @@
 /* components/popup/popup.wxss */
+@import '/css/flex.wxss';
+
 /* 蒙层 */
 .popup-box {
   position: absolute;
@@ -19,52 +21,146 @@
   border-bottom-left-radius: 40rpx;
   border-bottom-right-radius: 40rpx;
 }
-.row-btn{
+
+.row-info {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15rpx;
+  font-size: 32rpx;
+  overflow: hidden; */
+}
+
+.row-scroll {
+  overflow-y: scroll;
+}
+
+.row-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.clear-btn {
+  /* display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #B81728;
+  margin:10rpx 0; */
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-top: 1rpx dashed #f1f1f1;
+  justify-content: center;
+  align-items: center;
+  margin: 10rpx 0;
+  color: #B81728;
 }
-.row-btn view{
+
+.row-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-top: 1rpx solid #f1f1f1;
+}
+
+.row-btn view {
   flex: 1;
   text-align: center;
-  margin: 20rpx 10%;
+  margin: 20rpx 5%;
   padding: 12rpx 0;
-  font-size: 32rpx;
-  border-radius: 10rpx;
+  border-radius: 30rpx;
 }
-.left-btn{
-  background-color: #f1f1f1;
-  color: #33ccff;
+
+.left-btn {
+  border-radius: 30rpx;
+  border: 1rpx solid black;
 }
-.right-btn{
-  background-color: #33ccff;
+
+.right-btn {
+  background-color: black;
   color: white;
+  border-radius: 30rpx;
 }
-.fixed{
+
+.fixed {
   position: fixed;
   bottom: 0;
   width: 50%;
 }
-.conbox {
-  position: relative;
+
+.transTop {
+  overflow: hidden;
+  animation: scroll 0.3s linear;
 }
 
-.box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  background-color: #f00;
-  animation: move-up-and-down 2s linear infinite;
-}
+@keyframes scroll {
+  0% {
+    transform: translateY(50%);
+  }
 
-@keyframes move-up-and-down {
-  0%, 100% {
+  100% {
     transform: translateY(0);
   }
-  50% {
-    transform: translateY(100px);
+}
+
+.transBottom {
+  overflow: hidden;
+  animation: scrollt 0.3s linear;
+}
+
+@keyframes scrollt {
+  0% {
+    transform: translateY(-50%);
   }
+
+  100% {
+    transform: translateY(10%);
+  }
+}
+
+.tx-ct {
+  text-align: center;
+}
+
+.clr-9491 {
+  color: #949191;
+}
+
+/* scroll-view 滑动 */
+.scroll-view {
+  width: 100%;
+  /* height: 100px; */
+  white-space: nowrap;
+}
+
+.scroll-item {
+  display: inline-block;
+  width: 20%;
+  /* height: 100px; */
+}
+
+.active view {
+  /* width: ; */
+  border-bottom: 6rpx solid #2b2928;
+  color: #1b1b19;
+}
+
+/* 动态按钮 */
+.btn {
+  border-radius: 40rpx;
+  text-align: left;
+  font-size: 30rpx;
+  background-color: rgba(255, 255, 255, 1);
+  border: 2rpx solid #caccce;
+  color: #8a8e99;
+  padding: 0rpx 30rpx;
+  margin: 10rpx
+}
+
+.btn::after {
+  border: none
+}
+.btn.active {
+  background-color: #101213;
+  border: 2rpx solid #101213;
+  color: #fff
 }

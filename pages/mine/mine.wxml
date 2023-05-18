@@ -1,2 +1,5 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="flex-col flex-wrap">
+<view wx:for="{{diseaseList}}" wx:key="index" data-index="{{index}}" class="row-btn {{item.checked ? 'active' : ''}}" bindtap="diseaseSwitch">{{item.diseaseName}}</view>
+  <!-- <button wx:for="{{diseaseList}}" wx:key="index" data-index="{{index}}" class="btn {{item.checked ? 'active' : ''}}" bindtap="diseaseSwitch">{{item.diseaseName}}</button> -->
+</view>

@@ -8,7 +8,7 @@
     "pages/scan/scan",
     "pages/search/search",
     "pages/scan/scsn_d/scsn_d",
-    "components/popup/popup"
+    "components/popupTop/popupTop"
   ],
   "window": {
     "backgroundTextStyle": "light",
