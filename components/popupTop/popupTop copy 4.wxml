@@ -2,11 +2,9 @@
 <!-- 弹窗组件 -->
 <view wx:if="{{showPopup}}">
   <view class="popup-box" bindtap="hideDialog"></view>
-  <view class="info-top" style="height: {{modalHeight*2}}rpx; max-height: {{maxHeight*2}}rpx;">
-
+  <view class="info-top" style="height: {{(modalHeight + bottomBtnHeight)*2}}rpx;">
     <view class="row-info" id="content">
-
-      <view class="transTop">
+      <view class="transTop" id="transTopHeight">
         <!-- <scrollX class="scrollX" searchScrollList="{{searchScrollList}}"></scrollX> -->
         <scroll-view class="scroll-view" scroll-x="{{true}}">
           <view class="scroll-item tx-ct {{currentTab == index ? 'active' : ''}}" wx:for="{{searchScrollList}}" wx:key="item.id" data-idx="{{index}}" bindtap="currentTab">
@@ -21,8 +19,8 @@
           <van-search value="{{ value }}" shape="round" placeholder="搜索{{searchScrollList[currentTab].name}}" />
         </view>
         <view class="ft-se-14 tx-ct clr-999">18款葡萄酒</view>
-        <!-- 搜索选项详情 -->
-        <view class="row-scroll" style="width:100%;height:{{(modalHeight - 220) * 2}}rpx">
+        <view class="row-scroll" style="width:100%;height: {{(modalHeight )*2}}rpx;">
+          <!-- 搜索选项详情 -->
           <!-- 类型 -->
           <view wx:if="{{currentTab == 0}}">
             <!-- <view class="list-item flex-center" class="{{checkActiveStatus(model.type, item.uuid) ? 'item-active' : '' }}" v-for="item, index in model.displayList" :key="index" @click="onClickFilter(model, item)">
@@ -34,24 +32,6 @@
             <view class="flex-col flex-wrap">
               <view wx:for="{{diseaseList}}" wx:key="index" data-index="{{index}}" class="btn {{item.checked ? 'active' : ''}}" bindtap="diseaseSwitch">{{item.diseaseName}}</view>
             </view>
-          </view>
-          <view wx:if="{{currentTab == 3}}">
-            <!-- <view class="list-item flex-center" class="{{checkActiveStatus(model.type, item.uuid) ? 'item-active' : '' }}" v-for="item, index in model.displayList" :key="index" @click="onClickFilter(model, item)">
-              <image :src="item.icon" mode="" class="item-icon" v-if="model.type !== 'grape' && model.type !== 'region' && model.type !== 'style'">
-              </image>
-              <view class="item-text base-text">
-              </view>
-            </view> -->
-            <view>
-              <text class="line left-line"></text>
-              <text>《登高》</text>
-              <text class="line right-line"></text>
-            </view>
-            <view class="row-author">杜甫 〔唐代〕</view>
-            <view>风急天高猿啸哀，渚清沙白鸟飞回。</view>
-            <view>无边落木萧萧下，不尽长江滚滚来。</view>
-            <view>万里悲秋常作客，百年多病独登台。</view>
-            <view>艰难苦恨繁霜鬓，潦倒新停浊酒杯。</view>
           </view>
         </view>
       </view>

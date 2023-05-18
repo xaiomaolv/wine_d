@@ -94,7 +94,7 @@
 
 @keyframes scroll {
   0% {
-    transform: translateY(50%);
+    transform: translateY(60%);
   }
 
   100% {

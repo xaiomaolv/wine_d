@@ -16,9 +16,9 @@ Component({
     },
   },
   data: {
-    modalHeight: 10,
+    modalHeight: 0,
     showPopup: false,
-    maxHeight: 500,
+    maxHeight: 1000,
     active: 0,
     currentTab: 0,
     diseaseList: [{
@@ -67,6 +67,16 @@ Component({
         checked: false
       },
       {
+        diseaseCode: "J31.0",
+        diseaseName: "慢性鼻炎",
+        checked: false
+      },
+      {
+        diseaseCode: "A37.1",
+        diseaseName: "由于副百日咳博德特杆菌引起的百日咳",
+        checked: false
+      },
+      {
         diseaseCode: "N32.1",
         diseaseName: "膀胱肠瘘",
         checked: false
@@ -104,14 +114,28 @@ Component({
         if (rect) {
           console.log(rect, 're');
           // 根据内容高度设置弹窗高度
-          const contentHeight = rect.height
-          const modalHeight = Math.min(contentHeight, that.data.maxHeight)
-          console.log(modalHeight, 'modalHeight');
+          // const contentHeight = rect.height
+          // const modalHeight = Math.min(contentHeight, that.data.maxHeight)
+          // console.log(modalHeight, 'modalHeight');
+          let clientHeight = rect.height;
+          let clientWidth = rect.width;
+          let ratio = 750 / clientWidth;
+          let height = clientHeight * ratio;
+          console.log(height);
           that.setData({
-            modalHeight: Math.min(contentHeight, that.data.maxHeight)
+            modalHeight: Math.min(height, that.data.maxHeight)
           })
         }
-      }).exec()
+      }).exec(res => console.log(res,'11111111111'))
+      query.select('#bottom_btn').boundingClientRect(rect => {
+        if (rect) {
+          console.log(rect, 'bottom_btn');
+          let clientHeight = rect.height;
+          let clientWidth = rect.width;
+          let ratio = 750 / clientWidth;
+          let height = clientHeight * ratio;
+        }
+      }).exec(res => console.log(res,'22222222'))
     },
     // 隐藏授权弹窗
     hideDialog() {
@@ -133,10 +157,8 @@ Component({
         return;
       }
       this.setData({
-        currentTab: e.currentTarget.dataset.idx,
-        modalHeight:10
+        currentTab: e.currentTarget.dataset.idx
       })
-      this.updateModalHeight()
       // this.getList(this.data.currentTab)
     },
     /**
@@ -158,9 +180,9 @@ Component({
   },
   lifetimes: {
     ready() {
-      // // 页面加载时更新弹窗高度
-      // this.updateModalHeight()
-      // console.log(this.data.modalHeight, 'rady');
+      // 页面加载时更新弹窗高度
+      this.updateModalHeight()
+      console.log(this.data.modalHeight, 'rady');
     },
     created() {
       let that = this

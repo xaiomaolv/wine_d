@@ -55,53 +55,8 @@ van-nav-bar__text {
 }
 
 /* 滑块 */
-.price-range {
-  margin-top: 76px;
-  width: 327px;
-  height: 32px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 32px;
-  display: flex;
-  align-items: center;
-  color: #1b1b1b;
-}
-
-.range-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 327px;
-  height: 44px;
-  margin-top: 20px;
-
-}
-
-.price-range {
-  margin-top: 76px;
-  width: 327px;
-  height: 32px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 32px;
-  display: flex;
-  align-items: center;
-  color: #1b1b1b;
-}
-
-.range-slide {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 327px;
-  height: 44px;
-  margin-top: 20px;
-}
-
 .range-price {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
