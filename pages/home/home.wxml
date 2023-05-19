@@ -1,2 +1,66 @@
 <!--pages/home/home.wxml-->
+<!-- 顶部 -->
+<view class="primary-card" wx:for="{{wineList}}" wx:key="index">
+  <!-- 背景图 -->
+  <image class="header-bg" src="{{item.w_bg}}"></image>
+  <view class="flex-col">
+    <view class="flex-col-12">
+      <!-- 酒瓶 -->
+      <view class="">
+        <image class="wine-img" src="{{item.w_img}}" mode="aspectFit" />
+      </view>
+    </view>
+    <view class="flex-col-12 tx-ct" wx:for="{{item.rate}}" wx:for-item="rate" wx:key="index">
+      <view class="clr-FFF tx-ct" style="position: absolute;top: 60rpx;">
+        <view class="mg-10 ft-bd">{{rate.origin}}</view>
+        <view class="mg-10 ft-se-16 ft-bd">{{rate.desc}}</view>
+      </view>
+      <view class="flex-col">
+        <view class="ft-se-30 mg-rt-10">{{rate.rate}}</view>
+        <view class="flex-row">
+          <van-rate readonly color="#B81728" value="3" size="12" bind:change="onChange" />
+          <view class="clr-666 ft-se-16">{{rate.num}}条评分</view>
+        </view>
+      </view>
+      <view>
+        <button size="mini" class="price_btn">
+          ¥{{rate.price}}
+        </button>
+        <view class="ft-se-12 clr-999">*参考价格</view>
+      </view>
+    </view>
+  </view>
+  <view class="bottomText tx-of">
+    <view class="">{{item.w_name}}</view>
+    <view class="clr-999 ft-se-14">{{item.w_origin}}</view>
+  </view>
+</view>
 
+<!-- 热门排行榜 -->
+<view class="hot-card">
+  <view class="hot-card-bg"></view>
+  <view class="flex-col">
+    <view wx:for="{{wineLists}}" wx:key="index">
+      <view class="flex-col">
+        <image class="wine-hot-img" src="{{item.w_img}}" mode="aspectFit" />
+        <view class="hot-rate tx-ct">
+          <view class="ft-se-20">{{item.rate}}</view>
+          <van-rate readonly color="#B81728" value="3" size="12" bind:change="onChange" />
+          <view class="ft-se-12">{{item.num}}条评分</view>
+        </view>
+        <!-- 底部展示 -->
+        <!-- <view class="">
+          <view class="">{{item.w_name}}</view>
+          <view class="clr-999 ft-se-14">{{item.w_origin}}</view>
+        </view> -->
+      </view>
+      <view class="">
+          <view class="">{{item.w_name}}</view>
+          <view class="clr-999 ft-se-14">{{item.w_origin}}</view>
+        </view> 
+    </view>
+  </view>
+  <!-- </view> -->
+</view>
+<!-- 登录弹窗 -->
+<!-- <loginPopup class="loginPopup"></loginPopup> -->

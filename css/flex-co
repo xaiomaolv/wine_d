@@ -55,6 +55,7 @@
 .ft-se-24 {font-size: 48rpx;}
 .ft-se-26 {font-size: 52rpx;}
 .ft-se-28 {font-size: 56rpx;}
+.ft-se-30 {font-size: 60rpx;}
 /* 字体加粗 */
 .ft-bd{font-weight: bold;}
 

@@ -1,1 +1,142 @@
 /* pages/home/home.wxss */
+page {
+  background-color: rgb(242, 242, 242);
+  width: 100%;
+}
+
+.primary-card {
+  margin: 20rpx;
+  border-radius: 30rpx;
+  background-color: white;
+  height: 680rpx;
+  position: relative;
+}
+
+.primary-card .header-bg {
+  width: 100%;
+  height: 300rpx;
+  border-radius: 30rpx;
+  /* position: absolute; */
+  clip-path: ellipse(90% 60% at 35% 35%);
+}
+
+.wine-img {
+  width: 300rpx;
+  height: 480rpx;
+  position: absolute;
+  top: 20rpx;
+  /* margin-top: -340rpx; */
+}
+
+.primary-card .bottomText {
+  position: absolute;
+  bottom: 0;
+  margin: 30rpx;
+}
+
+.text-of {
+  /*第一步： 溢出隐藏 */
+  overflow: hidden;
+  /* 第二步：让文本不会换行， 在同一行继续 */
+  white-space: nowrap;
+  /* 第三步：用省略号来代表未显示完的文本 */
+  text-overflow: ellipsis;
+}
+
+.price_btn {
+  background-color: black;
+  color: white;
+  padding: 10rpx;
+  margin: 10rpx;
+  border-radius: 250rpx;
+}
+
+/* 编辑精选 */
+.mg-10 {
+  margin: 20rpx;
+}
+.mg-15{
+  margin: 30rpx;
+}
+.pickCard {
+  background: black;
+}
+.primary-cards {
+  margin: 20rpx;
+  /* border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx; */
+  border-radius: 30rpx;
+  background-color: white;
+  height: 940rpx;
+  position: relative;
+}
+
+.primary-cards .header-bg {
+  width: 100%;
+  height: 300rpx;
+  border-radius: 30rpx;
+  /* position: absolute; */
+  clip-path: ellipse(90% 60% at 35% 35%);
+}
+.primary-cards .bottomText {
+  position: absolute;
+  bottom: 0;
+}
+.recommendCard{
+  height: 260rpx;
+  background-color: rgb(242, 242, 242);
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+.recImg{
+  /* margin: 30rpx; */
+  border-radius: 50%;
+}
+.hotService {
+  /* width: 100%; */
+  height: 940rpx;
+  /* background-color: #fff; */
+  /* padding: 0 26rpx; */
+  box-sizing: border-box;
+}
+
+.hotServiceList_box {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+/* 热门排行榜 */
+.hot-card{
+  margin: 20rpx;
+  border-radius: 30rpx;
+  background-color: white;
+  height: 680rpx;
+  position: relative;
+}
+.hot-card-bg{
+  background: wheat;
+  width: 100%;
+  height: 300rpx;
+  /* position: absolute; */
+  clip-path: ellipse(90% 60% at 35% 35%);
+  z-index: 88;
+}
+.wine-hot-img {
+  width: 300rpx;
+  height: 480rpx;
+  /* position: absolute; */
+  /* top: 20rpx; */
+  margin-top: -240rpx;
+  z-index: 99;
+}
+.hot-rate{
+  height: 170rpx;
+  width: 170rpx;
+  margin-left: -140rpx;
+  border-radius: 50%;
+  background: white;
+  z-index: 100;
+}
+

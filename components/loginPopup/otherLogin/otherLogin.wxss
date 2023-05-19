@@ -1,3 +1,4 @@
+/* components/loginPopup/otherLogin/otherLogin.wxss */
 .mg-20 {
   margin: 40rpx;
 }

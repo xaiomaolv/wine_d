@@ -1,0 +1,103 @@
+<!--pages/home/home.wxml-->
+<!-- 顶部 -->
+<view class="primary-card" wx:for="{{wineList}}" wx:key="index">
+  <!-- 背景图 -->
+  <image class="header-bg" src="{{item.w_bg}}"></image>
+  <view class="flex-col">
+    <view class="flex-col-12">
+      <!-- 酒瓶 -->
+      <view class="">
+        <image class="wine-bg" src="{{item.w_img}}" mode="aspectFit" />
+      </view>
+    </view>
+    <view class="flex-col-12 tx-ct" wx:for="{{item.rate}}" wx:for-item="rate" wx:key="index">
+      <view class="clr-FFF tx-ct" style="position: absolute;top: 60rpx;">
+        <view class="mg-10 ft-bd">{{rate.origin}}</view>
+        <view class="mg-10 ft-se-16 ft-bd">{{rate.desc}}</view>
+      </view>
+      <view class="flex-col">
+        <view class="ft-se-30 mg-rt-10">{{rate.rate}}</view>
+        <view class="flex-row">
+          <van-rate readonly color="#B81728" value="3" size="12" bind:change="onChange" />
+          <view class="clr-666 ft-se-16">{{rate.num}}条评分</view>
+        </view>
+      </view>
+      <view>
+        <button size="mini" class="price_btn">
+          ¥{{rate.price}}
+        </button>
+        <view class="ft-se-12 clr-999">*参考价格</view>
+      </view>
+    </view>
+  </view>
+  <view class="bottomText tx-of">
+    <view class="">{{item.w_name}}</view>
+    <view class="clr-999 ft-se-14">{{item.w_origin}}</view>
+  </view>
+</view>
+
+<!-- 编辑精选 -->
+<view class="pickCard">
+  <view class="mg-tp-30">
+    <view class="pd-tp-20 clr-FFF">
+      <view class="tx-ct ft-se-18">编辑精选</view>
+      <view class="mg-10 tx-jt">编辑精选编辑精选编辑精选编辑精选编辑精选编辑精选编辑精选编辑精选编辑精选</view>
+    </view>
+    <view></view>
+    <view class="primary-cards" wx:for="{{wineList}}" wx:key="index">
+      <view>
+        <!-- 背景图 -->
+        <image class="header-bg" src="{{item.w_bg}}"></image>
+        <view class="flex-col">
+          <view class="flex-col-12">
+            <!-- 酒瓶 -->
+            <view class="">
+              <image class="wine-bg" src="{{item.w_img}}" mode="aspectFit" />
+            </view>
+          </view>
+          <view class="flex-col-12 tx-ct" wx:for="{{item.rate}}" wx:for-item="rate" wx:key="index">
+            <view class="clr-FFF tx-ct" style="position: absolute;top: 60rpx;">
+              <view class="mg-10 ft-bd">{{rate.origin}}</view>
+              <view class="mg-10 ft-se-16 ft-bd">{{rate.desc}}</view>
+            </view>
+            <view class="flex-col">
+              <view class="ft-se-30 mg-rt-10">{{rate.rate}}</view>
+              <view class="flex-row">
+                <van-rate readonly color="#B81728" value="3" size="12" bind:change="onChange" />
+                <view class="clr-666 ft-se-16">{{rate.num}}条评分</view>
+              </view>
+            </view>
+            <view>
+              <button size="mini" class="price_btn">
+                ¥{{rate.price}}
+              </button>
+              <view class="ft-se-12 clr-999">*参考价格</view>
+            </view>
+          </view>
+        </view>
+        <view class="bottomText">
+          <view class="mg-15 ">
+            <view class="tx-of">{{item.w_name}}</view>
+            <view class="clr-999 ft-se-14 tx-of">{{item.w_origin}}</view>
+          </view>
+          <!-- 推荐理由 -->
+          <view class="recommendCard">
+            <view class="mg-15 pd-tp-10">
+              推荐理由推荐理由推荐理由推荐理由推荐理由推荐理由推荐理由推荐理由
+            </view>
+            <view class="flex-col">
+              <image class="recImg mg-lt-30 mg-rt-30" src="/img/home/logo.png" style="width: 80rpx; height: 80rpx;"></image>
+              <view class="">
+                <view class="ft-se-16"> vivino </view>
+                <view class="ft-se-14 clr-999"> 葡萄酒编辑 </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>
+<!-- 登录弹窗 -->
+<!-- <loginPopup class="loginPopup"></loginPopup> -->

@@ -1,0 +1,15 @@
+<!--components/loginPopup/loginPopup/loginPopup.wxml-->
+<van-popup round show="{{ showLoginPopup }}" closeable close-icon="close" position="bottom"  bind:close="bindLoginCancel">
+  <view class="welcome flex-col">
+  <image src="/img/home/logo.png" style="width:40rpx;height:40rpx"></image>
+  <text>欢迎登录Vivino 唯唯诺</text></view>
+  <button class="btn btn_wechat">微信号一键登录</button>
+  <button class="btn btn_other">其他登录方式</button>
+  <view class="flex-col agreememt">
+    <radio class="mg-rt-10 green" checked="{{agreementChecked}}" bindtap="switchAgreement"></radio>
+    <text class="text-gray">我已阅读并同意</text>
+    <text style="color: #999;" bindtap="handleAgreement">《用户协议》</text>
+    和
+    <text style="color: #999;" bindtap="handleAgreement">《隐私政策》</text>
+  </view>
+</van-popup>

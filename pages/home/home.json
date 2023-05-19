@@ -1,7 +1,8 @@
 {
   "usingComponents": {
     "van-icon": "/miniprogram_npm/@vant/weapp/icon/index",
-    "van-field": "/miniprogram_npm/@vant/weapp/field/index"
+    "van-field": "/miniprogram_npm/@vant/weapp/field/index",
+    "loginPopup":"/components/loginPopup/loginPopup/loginPopup"
   },
   "navigationBarTitleText": "为你甄选"
 }

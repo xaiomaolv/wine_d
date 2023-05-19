@@ -113,14 +113,14 @@ Component({
         }
       }).exec()
     },
-    // 隐藏授权弹窗
+    // 隐藏弹窗
     hideDialog() {
       this.setData({
         showPopup: false,
         modalHeight: 0
       })
     },
-    //显示授权弹窗
+    //显示弹窗
     showDialog() {
       this.setData({
           showPopup: true

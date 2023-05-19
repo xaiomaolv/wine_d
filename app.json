@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/search/searchDetail/searchDetail",
     "pages/home/home",
     "pages/index/index",
+    
+    "pages/search/searchDetail/searchDetail",
     "pages/community/community",
     "pages/mine/mine",
     "pages/scan/scan",
@@ -55,5 +56,10 @@
     ]
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-popup": "/miniprogram_npm/@vant/weapp/popup/index",
+    "van-field": "/miniprogram_npm/@vant/weapp/field/index",
+    "van-rate": "/miniprogram_npm/@vant/weapp/rate/index"
+  }
 }

@@ -136,6 +136,7 @@
 .ft-se-28 {
   font-size: 56rpx;
 }
+.ft-se-30 {font-size: 60rpx;}
 
 /* 字体加粗 */
 .ft-bd {
@@ -333,7 +334,9 @@
   padding-left: 60rpx;
   padding-right: 60rpx;
 }
-
+.mg-10{
+  margin:20rpx;
+}
 .mg-bt-5 {
   margin-bottom: 10rpx;
 }
